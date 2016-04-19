@@ -3,7 +3,7 @@
     <div class="col-md-3">
         <center>Preview Pane</center>
     </div>
-    <div class="col-md-7">
+    <div class="col-md-8">
       <h1>Mealkits</h1>
       <% @products.each do |category, products| %>
       <% products.each do |product| %>
@@ -18,12 +18,7 @@
           <%= button_to "Add to basket", product_path(product.permalink), :method => :post %>
         </div>
       </div>
-
-
-
-
       <% end %>
-
       <% end %>
     </div>
   </div>
