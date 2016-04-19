@@ -1,0 +1,81 @@
+.navbar-primary{
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  background-color: #61dff0;
+  // border-bottom: 1px solid #eee;
+
+  .mainNavCart-itemQty{
+    line-height: 20px;
+    font-size: 13px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    // background-color: #FFCE64;
+    background-color: #f63440;
+    color: #fff;
+    border-radius: 20px;
+    bottom: 5px;
+    left: 35px;
+  }
+}
+
+.main-title{
+  // margin-top: 13px;
+  display: inline-block;
+  float: left;
+  color: white;
+  font-weight: 600;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 30px;
+  text-decoration: none;
+  // padding-left: 7%;
+  margin-left: 25px;
+}
+
+.main-title:hover{
+    color: white;
+  }
+
+
+/* The container <div> - needed to position the dropdown content */
+.cart {
+    padding: 11.5px;
+    padding-top: 14px;
+    padding-bottom: 9px;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+    display: block;
+    float: right;
+
+    :hover{
+      background-color: white;
+    }
+}
+
+#product{
+  *{
+      font-family: 'Source Sans Pro', sans-serif; 
+      font-weight:200;
+  }
+}
+
+@media (min-width: 700px) {
+  .grid{
+      display: flex;
+      justify-content: space-between;
+  }
+}
+.grid-item{
+  text-align: center;
+  span{
+    position: absolute;
+    bottom: 110px;
+    text-align: center;
+    width: 100%;
+  }
+  p{
+    margin:5px;
+  }
+}

@@ -1,0 +1,31 @@
+<div id="product-index" class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+        <center>Preview Pane</center>
+    </div>
+    <div class="col-md-7">
+      <h1>Mealkits</h1>
+      <% @products.each do |category, products| %>
+      <% products.each do |product| %>
+
+      <div style="display: inline-block" class="grid-item">
+        <div style="position:relative">
+          <span> <%= number_to_currency product.price %> </span>
+          <% if product.default_image %>
+          <%= link_to image_tag(product.default_image.path, :size => "200x200", :class=> "product-image"), product_path(product.permalink) %>
+          <% end %>
+          <p><%= product.name %></p>
+          <%= button_to "Add to basket", product_path(product.permalink), :method => :post %>
+        </div>
+      </div>
+
+
+
+
+      <% end %>
+
+      <% end %>
+    </div>
+  </div>
+</div>
+

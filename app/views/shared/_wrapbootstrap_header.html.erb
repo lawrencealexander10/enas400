@@ -1,0 +1,14 @@
+<nav class="wrap-nav">
+	<div class="container">
+		<div class="row">
+			<%= link_to( 'bento', root_path, :class => 'logo-title' )  %> 
+
+			<div class="cart">
+			  <%= link_to image_tag("shopping.svg", :size => "30x40", :border => 0, :alt => '', :title => '', :class => 'dropbtn'), basket_path %> 
+			  <% if has_order? && current_order.has_items? %>
+			    	<span class="mainNavCart-itemQty"> <%=current_order.total_items%> </span>
+			  <% end %>
+			</div>
+		</div>
+	</div>
+</nav>

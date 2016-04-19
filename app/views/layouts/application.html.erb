@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bento</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <%= stylesheet_link_tag "normalize.css" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render :partial => '/shared/wrapbootstrap_header'%>
+
+<% if false %>
+<% if current_order %>
+<p style="border:1px solid black;padding:10px;">
+  You have <%= pluralize current_order.total_items, 'item'%> in your basket which cost
+  <%= number_to_currency current_order.total_before_tax %>.
+</p>
+<%= link_to "View basket", basket_path %>
+<%= link_to "Checkout", checkout_path %>
+<% end%>
+
+<%= flash[:notice] %>
+<% end %>
+
+
+<%= yield %>
+
+</body>
+</html>
