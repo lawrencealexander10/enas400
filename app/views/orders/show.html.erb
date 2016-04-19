@@ -1,3 +1,9 @@
-<h2>Your basket</h2>
-<%= render 'items', :order => current_order %>
-<p><%= link_to 'Empty basket', basket_path, :method => :delete %></p>
+<div class="container">
+	<span>glyphicon glyphicon-shopping-cart</span>
+	<%= render 'items', :order => current_order %>
+	<div class="group-buttons">
+		<%= button_to 'Empty basket', basket_path, :method => :delete %>
+		<%= button_to( 'Continue Shopping', root_path, :style => "float: right" )  %> 
+		<%= button_to "Checkout", checkout_path %>
+	</div>
+</div>

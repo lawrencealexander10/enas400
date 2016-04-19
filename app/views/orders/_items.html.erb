@@ -1,4 +1,4 @@
-<table width='100%' border='1'>
+<table id="checkout-table" width='100%' border='1'>
   <thead>
     <tr>
       <td>Quantity</td>
@@ -11,8 +11,16 @@
   <tbody>
     <% order.order_items.each do |item| %>
     <tr>
-      <td><%= item.quantity %></td>
-      <td><%= item.ordered_item.full_name %></td>
+      <td style="font-weight: 600">
+          <% unless defined?(readonly) %>
+            <span>
+              <%= link_to "+", adjust_basket_item_quantity_path(item.id), :method => :post, :class => 'ajax' %>
+              <%= link_to "-", adjust_basket_item_quantity_path(item.id), :method => :delete, :class => 'ajax' %>
+            </span>
+          <% end %>
+        <%= item.quantity %>
+      </td>
+      <td><%= link_to item.ordered_item.full_name, product_path(item.ordered_item.permalink) %></td>
       <td><%= number_to_currency item.sub_total %></td>
       <td><%= number_to_currency item.tax_amount %></td>
       <td><%= number_to_currency item.total %></td>

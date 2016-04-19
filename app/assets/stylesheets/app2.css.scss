@@ -1,3 +1,10 @@
+*{
+  font-family: 'Source Sans Pro', sans-serif; 
+  font-weight:200;
+}
+
+
+
 .wrap-nav{
 	z-index: 100;
 	border-bottom: 1px solid black;
@@ -26,20 +33,12 @@
 }
 
 #product-show{
-  *{
-      font-family: 'Source Sans Pro', sans-serif; 
-      font-weight:200;
-  }
   .tier{
   	font-size: 1.5em;
   }
 }
 
 #product-index{
-  *{
-      font-family: 'Source Sans Pro', sans-serif; 
-      font-weight:200;
-  }
   .grid-item{
   	margin: 10px 35px;
 	  span{
@@ -54,5 +53,23 @@
 		&:hover{
 			opacity: .5;
 		}
+	}
+}
+
+#checkout-table{
+	border:0;
+	tr{
+		border: 0;
+	}
+	td{
+		border-left: 0;
+		border-right: 0;
+	}
+}
+
+.group-buttons{
+	form{
+		display: inline;
+		margin-right: 5px;
 	}
 }
