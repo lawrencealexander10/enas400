@@ -33,13 +33,20 @@
     <% end %>
 
     <% if order.delivery_service %>
-    <tr>
-      <td></td>
-      <td><%= order.delivery_service.name %></td>
-      <td><%= number_to_currency order.delivery_price %></td>
-      <td><%= number_to_currency order.delivery_tax_amount %></td>
-      <td><%= number_to_currency order.delivery_price + order.delivery_tax_amount %></td>
-    </tr>
+      <tr class="delivery">
+        <td class="method" colspan="4">
+          <% if defined?(readonly) %>
+            <%= order.delivery_service.name %>
+          <% else %>
+            <%= form_tag change_delivery_service_path do  %>
+              <%= select_tag 'delivery_service', options_from_collection_for_select(order.available_delivery_services, :id, :name, order.delivery_service.id) %>
+            <% end %>
+          <% end %>
+        </td>
+        <td class="money">
+          <%= number_to_currency order.delivery_price %>
+        </td>
+      </tr>
     <% end %>
 
   </tbody>
