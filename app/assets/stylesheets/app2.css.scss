@@ -3,11 +3,53 @@
   font-weight:200;
 }
 
+.top-section{
+	width: 100%;
+	background-image: url("http://res.cloudinary.com/grubhub-marketing/image/upload/v1460472623/Marketing%20assets/2016-MarchSeasonal-Desktop-1200by550px-GH.jpg") ;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	// position: absolute;
+	
+	h2{
+		margin-bottom: 15px;
+		padding-top: 20%;
+	}
+
+	p{
+		text-align: left; 
+		color: white; 
+		font-weight:400;
+		margin-bottom: 10px;
+	}
+
+	select{
+		display: inline;
+		text-align: center;
+		width: 400px;
+	}
+
+	form{
+		display: inline;
+	}
+
+	input{
+		
+	}
+
+	.homepage-center-text{
+		text-align: left;
+		color: white;
+		// font-size: 2em;
+		font-weight: bold;
+		vertical-align: middle;
+	}
+}
 
 
 .wrap-nav{
 	z-index: 100;
-	border-bottom: 1px solid black;
+	// position: fixed;
+	// border-bottom: 1px solid black;
 
 	.logo-title{
 		color: #61dff0;
