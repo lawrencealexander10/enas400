@@ -11,6 +11,17 @@
 <body>
 <%= render :partial => '/shared/wrapbootstrap_header'%>
 
+  <% if notice || alert %>
+    <div class="row">
+      <% if notice || alert %>
+        <div class="flash_messages">
+          <%= raw "<div data-alert class='alert-box warning'> #{notice} <a href='' class='close'>&times;</a></div>"  if notice %>
+          <%= raw "<div data-alert class='alert-box alert'>#{alert} <a href='' class='close'>&times;</a></div>"     if alert %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  
 <% if false %>
 <% if current_order %>
 <p style="border:1px solid black;padding:10px;">

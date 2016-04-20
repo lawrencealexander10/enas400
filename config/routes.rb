@@ -11,12 +11,12 @@ Rails.application.routes.draw do
   delete 'basket/delete/:order_item_id' => 'orders#remove_item', :as => 'remove_basket_item'
 
   #checkout
-  match "checkout", to: "orders#checkout", as: "checkout", via: [:get, :post, :patch]
+  match "checkout", to: "orders#checkout", as: "checkout", via: [:get, :patch]
   match "checkout/pay", to: "orders#payment", as: "checkout_payment", via: [:get, :post]
   match "checkout/confirm", to: "orders#confirmation", as: "checkout_confirmation", via: [:get, :post]
 
   get "/homepage/index" => 'homepage#index'
-  # The priority is based upon order of creation: first created -> highest priority.
+  # The priority is based upon order of creation: fxirst created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
