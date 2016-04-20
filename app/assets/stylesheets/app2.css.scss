@@ -48,7 +48,7 @@
 
 .wrap-nav{
 	z-index: 100;
-	position: fixed;
+	// position: fixed;
 	width: 100%;
 	// background-color: white;
 	// border-bottom: 1px solid black;
@@ -103,6 +103,13 @@
 		border-radius: 10px;
 		&:hover{
 			opacity: .5;
+		}
+	}
+	.preview-pane{
+		background-color: black;
+		height: inherit;
+		img{
+			width: 100%;
 		}
 	}
 }

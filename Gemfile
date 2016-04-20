@@ -31,6 +31,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'shoppe-notification'
 #stripe
 gem "shoppe-stripe", require: "shoppe/stripe"
+#bootstrap
+gem 'bootstrap-sass', '~> 3.3.6'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

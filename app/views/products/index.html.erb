@@ -1,7 +1,8 @@
 <div id="product-index" class="container-fluid">
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-3 preview-pane">
         <center>Preview Pane</center>
+        <img src="/assets/grubhub">
     </div>
     <div class="col-md-8">
       <h1>Mealkits</h1>
@@ -23,4 +24,19 @@
     </div>
   </div>
 </div>
+<button id='test'></button>
 
+<script>
+$('#test').click(function(){
+  $.ajax({
+        type: "GET",
+        dataType: "json",
+        url: "/product/yaki-linguine",
+        success: function(data){
+          console.log(data)
+        }
+    }); 
+} )
+
+
+</script>
