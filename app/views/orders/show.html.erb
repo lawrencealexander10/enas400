@@ -1,9 +1,9 @@
 <div class="container">
-	<span>glyphicon glyphicon-shopping-cart</span>
+	<span> Shopping Cart</span>
 	<%= render 'items', :order => current_order %>
 	<div class="group-buttons">
 		<%= button_to 'Empty basket', basket_path, :method => :delete %>
-		<%= button_to( 'Continue Shopping', root_path, :style => "float: right" )  %> 
-		<%= button_to "Checkout", checkout_path %>
+		<%= button_to( 'Continue Shopping', root_path)  %> 
+		<%= button_to "Checkout", checkout_path, :style => "float: right"  %>
 	</div>
 </div>
