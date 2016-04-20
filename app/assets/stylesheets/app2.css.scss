@@ -12,7 +12,7 @@
 	
 	h2{
 		margin-bottom: 15px;
-		padding-top: 20%;
+		padding-top: 25%;
 	}
 
 	p{
@@ -48,10 +48,14 @@
 
 .wrap-nav{
 	z-index: 100;
-	// position: fixed;
+	position: fixed;
+	width: 100%;
+	// background-color: white;
 	// border-bottom: 1px solid black;
 
 	.logo-title{
+		top: 5px;
+    	position: relative;
 		color: #61dff0;
 		font-weight: 600;
 		font-family: 'Avenir', sans-serif;
@@ -72,6 +76,10 @@
 	    border-radius: 20px;
 	    bottom: 5px;
 	    left: 35px;
+  	}
+
+  	.cart{
+  		padding-top: 5px;
   	}
 }
 
