@@ -1,5 +1,5 @@
 # Change these
-server 'your_server_ip', port: your_port_num, roles: [:web, :app, :db], primary: true
+server 'your_server_ip', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@example.com:username/appname.git'
 set :application,     'appname'
